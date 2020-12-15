@@ -13,4 +13,4 @@ This app is for people who tend to sit for a very long time in front of computer
 
 -----
 ## Release
-Packed and unpacked releases can be found at the releases section on the right side of the page.
+Windows Installer can be found at the releases section on the right side of the page.
