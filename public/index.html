@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stand Up!</title>
+    <link rel="shortcut icon" href="asset/timer.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style/bootstrap.min.css">
+    <style>
+        *{-webkit-user-select: none;}
+    </style>
+</head>
+<body class="bg-dark text-white">
+    <nav class="navbar navbar-expand navbar-light bg-secondary">
+        <div class="container-fluid">
+            <div class="navbar-brand ml-4">Stand Up</div>
+            <ul class="navbar-nav mr-2">
+                <li class="nav-item">
+                    <div class="btn nav-link" id="resetBtn">Reset</div>
+                </li>
+                <li class="nav-item ml-2">
+                    <div class="btn nav-link" id="hideBtn">Hide</div>
+                </li>
+                <li class="nav-item ml-2">
+                    <div class="btn nav-link" id="quitBtn">Quit</div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" >
+        <div class="row align-items-center justify-content-evenly" style="height: 60vh;">
+            <div class="col p-4 border-right border-primary d-flex flex-column align-items-center justify-content-center">
+                <div class="h3">Sitting time left:</div>
+                <div class="display-3" id="timer"></div>
+            </div>
+            <div class="col p-4 border-left border-primary d-flex flex-column align-items-center justify-content-center">
+                <div class="h3">Don't sit for:</div>
+                <div class="display-3" id="stand"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 offset-4">
+                <button class="btn btn-outline-success btn-block py-3" id="startBtn">
+                    <div class="display-4">START</div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirm Modal -->
+    <div class="modal" id="confirmModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="confirmLabel" aria-hidden="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" style="color: #343a40" id="confirmLabel">Time's Up</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="display-3 text-center" id="message">
+                        Stop sitting, STAND UP!
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-primary" id="confirmBtn">
+                        I'm Standing
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Script -->
+    <script>
+        window.$ = window.jQuery = require('./js/jquery.min.js')
+    </script>
+    <script src="style/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

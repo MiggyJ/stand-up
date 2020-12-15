@@ -1,0 +1,47 @@
+{
+  "name": "standup",
+  "version": "1.0.0",
+  "description": "Timer to let you know you're using the computer too much",
+  "main": "./public/electron.js",
+  "scripts": {
+    "electron": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [
+    "timer"
+  ],
+  "author": "Jairus Miguel T. Montante",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^10.0.0",
+    "electron-builder": "^22.9.1"
+  },
+  "build": {
+    "productName": "Stand Up",
+    "appId": "com.stand-up.app",
+    "files": [
+      "public"
+    ],
+    "directories": {
+      "buildResources": "public"
+    },
+    "extends": null,
+    "win": {
+      "asar": false,
+      "target": "nsis",
+      "icon": "public/asset/icon.ico"
+    },
+    "nsis": {
+      "installerIcon": "public/asset/icon.ico",
+      "installerHeaderIcon": "public/asset/icon.ico",
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false,
+      "runAfterFinish": false,
+      "deleteAppDataOnUninstall": true
+    }
+  },
+  "engines": {
+    "node": "12.13.0"
+  },
+  "dependencies": {}
+}
